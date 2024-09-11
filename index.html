@@ -3,59 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arte Déco - Página Inicial</title>
+    <title>Arte Déco - Estilo e Elegância</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #e3d4a1;
-            color: #3d3d3d;
+            background-color: #f5e6c8;
+            color: #333;
             margin: 0;
             padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
         header {
-            background-color: #333;
+            background-color: #1b1b1b;
             color: #fff;
             text-align: center;
-            padding: 1rem 0;
+            padding: 2rem;
+            position: relative;
         }
 
-        h1 {
-            font-size: 3rem;
+        header h1 {
+            font-size: 4rem;
             font-family: 'Georgia', serif;
-            margin: 0;
             letter-spacing: 5px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        /* Formas geométricas no cabeçalho */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-bottom: 100px solid #d4af37;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-right: 100px solid transparent;
+            border-bottom: 100px solid #d4af37;
         }
 
         nav {
             text-align: center;
-            margin: 2rem;
+            margin: 2rem 0;
         }
 
         nav a {
-            color: #000;
-            text-decoration: none;
-            padding: 1rem;
             font-size: 1.5rem;
+            text-decoration: none;
+            color: #333;
+            margin: 0 1rem;
         }
 
         nav a:hover {
-            color: #5f4b8b;
+            color: #d4af37;
         }
 
         .container {
-            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
             padding: 2rem;
+            text-align: center;
+        }
+
+        .container h2 {
+            font-family: 'Georgia', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Tipografia estilizada */
+        .decorative-text {
+            font-size: 1.8rem;
+            font-family: 'Courier New', Courier, monospace;
+            color: #d4af37;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Forma geométrica - linhas */
+        .geometric-shape {
+            width: 300px;
+            height: 100px;
+            margin: 2rem auto;
+            background: linear-gradient(135deg, #d4af37 25%, transparent 25%) -50px 0,
+                        linear-gradient(225deg, #d4af37 25%, transparent 25%) -50px 0,
+                        linear-gradient(315deg, #d4af37 25%, transparent 25%),
+                        linear-gradient(45deg, #d4af37 25%, transparent 25%);
+            background-size: 100px 100px;
+            background-color: #fff;
+            border: 5px solid #d4af37;
+        }
+
+        /* Imagens Art Déco */
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+
+        .image-gallery img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border: 5px solid #d4af37;
         }
 
         footer {
-            background-color: #333;
+            background-color: #1b1b1b;
             color: white;
             text-align: center;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 1.5rem;
+            margin-top: 3rem;
         }
     </style>
 </head>
@@ -66,17 +134,33 @@
     </header>
 
     <nav>
-        <a href="index.html">Início</a>
-        <a href="about.html">Sobre</a>
+        <a href="#">Início</a>
+        <a href="#">Galeria</a>
+        <a href="#">Contato</a>
     </nav>
 
     <div class="container">
-        <h2>Bem-vindo ao Mundo da Arte Déco</h2>
-        <p>A Arte Déco foi um movimento artístico que influenciou a arquitetura, design de interiores, moda e até objetos do cotidiano no início do século XX.</p>
+        <h2>O Brilho e a Elegância da Arte Déco</h2>
+        <p class="decorative-text">Formas Geométricas, Luxo e Sofisticação</p>
+
+        <!-- Forma geométrica decorativa -->
+        <div class="geometric-shape"></div>
+
+        <p>
+            A Arte Déco foi um dos estilos mais influentes no início do século XX, com sua ênfase em formas geométricas, tipografia ousada, e materiais luxuosos. 
+            Elementos metálicos, cores vibrantes e um senso de modernidade atemporal são as principais características desse movimento artístico.
+        </p>
+
+        <!-- Galeria de imagens inspiradas na Arte Déco -->
+        <div class="image-gallery">
+            <img src="https://postimg.cc/CZTc7ZwW" alt="Imagem Art Déco 1">
+            <img src="https://postimg.cc/QVx0fZrx" alt="Imagem Art Déco 2">
+            <img src="https://postimg.cc/94hBTvp2" alt="Imagem Art Déco 3">
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 - Arte Déco</p>
+        <p>&copy; 2024 - Arte Déco - Todos os direitos reservados.</p>
     </footer>
 
 </body>
