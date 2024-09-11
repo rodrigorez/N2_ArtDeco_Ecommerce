@@ -1,268 +1,219 @@
-<html>
-    <html lang="pt-BR">
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Arte Déco - Elegância e Estilo</title>
+    <style>
+        body {
+            background-color: #f5e6c8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
 
-body {
-    font-family: Roboto;
-}
+        header {
+            background-color: #1b1b1b;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
 
-.primeira-tela {
-    width: 100vw;
-    height: 100vh;
-    background-image: url(scr/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
-}
-.container {
-    width: 100vw;
-    height: 22vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+        header h1 {
+            font-size: 4rem;
+            font-family: 'Georgia', serif;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin: 0;
+        }
 
-}
+        /* Formas geométricas no cabeçalho */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-bottom: 100px solid #d4af37;
+        }
 
-.logo-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.linha-menu {
-    width: 90%;
-    height: 2px;
-    margin-top: 5px;
-    background-color: aliceblue;
-}
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-right: 100px solid transparent;
+            border-bottom: 100px solid #d4af37;
+        }
 
-.topo {
-    width: 90vw;
-    height: 70%;
-    display: flex;
-}
+        nav {
+            text-align: center;
+            margin: 2rem 0;
+        }
 
-.hbg-menu {
-    width: 80px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-}
+        nav a {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #333;
+            margin: 0 1rem;
+        }
 
-.linha_1{
-    width: 50%;
-    height: 5px;
-    border-radius: 12px;
-    background-color: rgb(236, 234, 234);
-}
-.linha_2{
-    width: 50%;
-    height: 5px;
-    border-radius: 12px;
-    background-color: whitesmoke;
-}
-.linha_3{
-    width: 50%;
-    height: 5px;
-    border-radius: 12px;
-    background-color: whitesmoke;
-}
+        nav a:hover {
+            color: #d4af37;
+        }
 
-.logo {
-    width: 300px;
-    height: 100%;
-    margin-left: -100px;
-    border: 1px solid red;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
 
-.box-menu {
-    position: absolute;
-    margin-top: 17vh;
-    width: 30vw;
-    height: auto;
-    border: 1px solid rgba(255, 255, 255, 0.336);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    display: none;
-    transition: opacity 0.4s ease-in-out;
-    background-color: whitesmoke;
-}
+        .container h2 {
+            font-family: 'Georgia', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
 
+        /* Tipografia estilizada */
+        .decorative-text {
+            font-size: 1.8rem;
+            font-family: 'Courier New', Courier, monospace;
+            color: #d4af37;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
 
-.box-menu.show {
-    display: block;
-    opacity: 1;
-}
+        /* Forma geométrica - linhas */
+        .geometric-shape {
+            width: 300px;
+            height: 100px;
+            margin: 2rem auto;
+            background: linear-gradient(135deg, #d4af37 25%, transparent 25%) -50px 0,
+                        linear-gradient(225deg, #d4af37 25%, transparent 25%) -50px 0,
+                        linear-gradient(315deg, #d4af37 25%, transparent 25%),
+                        linear-gradient(45deg, #d4af37 25%, transparent 25%);
+            background-size: 100px 100px;
+            background-color: #fff;
+            border: 5px solid #d4af37;
+        }
 
-.box-menu ul {
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-}
-.box-menu li {
-    list-style: none;
-    padding: 20px;
-    font-size: 24px;
-    text-align: center;
-    color: black;
-    width: 100%;
-}
+        /* Sessão de produtos */
+        .product-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
 
-.box-menu li:hover {
-    background-color: rgba(0, 0, 0, 0.979);
-    transition: 0.2s;
-    color: aliceblue;
-}
-.box-menu a {
-    text-decoration: none;
-    color: black;
-}
+        .product {
+            width: 30%;
+            background-color: #fff;
+            border: 5px solid #d4af37;
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+        }
 
-/* PARTE DA PRIMEIRA SECTION */
+        .product img {
+            width: 100%;
+            height: auto;
+            border-bottom: 5px solid #d4af37;
+        }
 
-.primeira-section {
-    width: 100%;
-    height: 78%;
-}
+        .product h3 {
+            font-size: 1.8rem;
+            margin: 1rem 0;
+        }
 
-.textos-parte1 {
-    display: flex;
-    height: 100%;
-}
+        .product p {
+            font-size: 1.2rem;
+            color: #555;
+        }
 
-.texto-esquerdo {
-    margin-left: 15%;
-    margin-top: 5%;
-    width: 60%;
-    height: 70%;
-}
+        .product .price {
+            font-size: 1.5rem;
+            color: #d4af37;
+            margin: 1rem 0;
+        }
 
-.texto-esquerdo h1 {
-    color: white;
-    letter-spacing: 3px;
-    font-size: 80px
-}
-.texto-esquerdo h1:nth-child(2) {
-    color: white;
-    font-size: 80px;
-    margin-top: -25px;
-}
+        .product button {
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
 
-.texto-esquerdo p {
-    font-size: 19px;
-    color: antiquewhite;
-    width: 98%;
-    height: auto;
-    text-align: left;
-    margin-top: 30px;
-}
+        .product button:hover {
+            background-color: #b8942b;
+        }
 
-.box-btn {
-    margin-top: 5%;
-    margin-left: 5%;
-    width: 50%;
-    height: 70%;
-    position: relative;
-    cursor: pointer;
-}
-.btn-conhecer-prod {
-    width: 100%;
-    height: 70%;
-    margin-top: 100px;
-}
+        footer {
+            background-color: #1b1b1b;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
 
-.btn-conhecer-prod span {
-    font-size: 28px;
-    color: aliceblue;
-    border-top: 3px solid rgba(255, 217, 0, 0.795);
-    border-bottom: 3px solid gold;
-    padding: 20px;
-    text-align: center;
-}
+    <header>
+        <h1>Loja Arte Déco</h1>
+    </header>
 
-.linha-lateral1 {
-    position: absolute;
-    width: 3px;
-    top: 80px;
-    height: 30px;
-    background-color: gold;
-}
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Produtos</a>
+        <a href="#">Contato</a>
+        <a href="#">Carrinho</a>
+    </nav>
 
-.linha-lateral2 {
-    position: absolute;
-    width: 3px;
-    top: 125px;
-    height: 30px;
-    background-color: gold;
-}
+    <div class="container">
+        <h2>Exclusividade e Elegância com Arte Déco</h2>
+        <p class="decorative-text">Produtos Inspirados na Sofisticação do Design Clássico</p>
 
-.linha-lateral3 {
-    position: absolute;
-    width: 3px;
-    left: 363px;
-    top: 80px;
-    height: 30px;
-    background-color: rgb(255, 217, 0);
-}
+        <!-- Forma geométrica decorativa -->
+        <div class="geometric-shape"></div>
 
-.linha-lateral4 {
-    position: absolute;
-    width: 3px;
-    left: 363px;
-    top: 125px;
-    height: 30px;
-    background-color: gold;
-}
+        <!-- Sessão de produtos -->
+        <div class="product-section">
+            <div class="product">
+                <img src="https://example.com/produto1.jpg" alt="Produto Art Déco 1">
+                <h3>Vaso Geométrico Dourado</h3>
+                <p>Um toque de luxo e modernidade para sua casa.</p>
+                <p class="price">R$ 250,00</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://example.com/produto2.jpg" alt="Produto Art Déco 2">
+                <h3>Luminária Vintage</h3>
+                <p>Iluminação com estilo e elegância.</p>
+                <p class="price">R$ 480,00</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://example.com/produto3.jpg" alt="Produto Art Déco 3">
+                <h3>Espelho Octogonal</h3>
+                <p>Detalhes geométricos que encantam.</p>
+                <p class="price">R$ 350,00</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
 
+    <footer>
+        <p>&copy; 2024 - Loja Arte Déco - Todos os direitos reservados.</p>
+    </footer>
 
-@media (max-width: 900px) {
-    .box-menu {
-        position: absolute;
-        width: 95vw;
-        height: 50vh;
-        border: 1px solid red;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .box-menu ul {
-        display: block;
-    }
-
-    .box-menu li {
-        list-style: none;
-        margin: 2.5rem;
-        font-size: 24px;
-        text-align: center;
-        color: antiquewhite;
-    }
-
-
-    .primeira-section {
-        width: 100%;
-        height: auto;
-    }
-    
-    .textos-parte1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        height: 100%;
-    }
-
-}
-    </html>
+</body>
+</html>
